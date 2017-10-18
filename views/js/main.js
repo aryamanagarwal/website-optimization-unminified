@@ -96,7 +96,7 @@ function logAverageFrame(times) {
 // Moves the sliding background pizzas based on scroll position
 function updatePositions() {
 	frame++;
-	var e = document.body.scrollTop / 1250;
+	var e = document.scrollingElement.scrollTop / 1250;
 	window.performance.mark("mark_start_frame");
 	for (var a, items = document.getElementsByClassName("mover"), n = 0; n < items.length; n++) {
 		phase = Math.sin(e + n % 5);
